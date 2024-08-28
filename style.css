@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #ec1f55;
+    --primary-color: #2be3be;
     --text-color: #333;
 }
 
@@ -57,7 +57,7 @@ header h4 {
     font-size: 12px;
 }
 
-header h2 {
+header marquee {
     color: var(--text-color);
     font-size: 20px;
 }
@@ -77,6 +77,8 @@ header h2 {
     background-size: cover;
     margin: auto;
 }
+
+
 
 /* CONTROL */
 .control {
@@ -214,7 +216,7 @@ header h2 {
     margin-top: 30px;
     -webkit-appearance: none;
     height: 4px;
-    background: linear-gradient(90deg, rgb(75, 36, 173) 0%, rgb(214, 214, 214) 0%);
+    background: linear-gradient(90deg, rgb(233, 40, 40) 0%, rgb(214, 214, 214) 0%);
     border-radius: 1px;
     outline: none;
     opacity: 0.8;

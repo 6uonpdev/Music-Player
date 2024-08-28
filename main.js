@@ -16,7 +16,7 @@
             const PLAYER_STORAGE_KEY = 'DUONG_PLAYER'
     
             const player = $('.player')
-            const heading = $('header h2')
+            const heading = $('header marquee')
             const cdThumb = $('.cd-thumb')
             const audio = $('#audio')
             const cd = $('.cd')
@@ -29,6 +29,8 @@
             const playlist = $('.playlist')
             const volumeIcon = $('.volume .btn-volume')
             const volumeSet = $('#volumeAdjust')
+            const startTime = $('startTime')
+            const endTime = $('endTime')
             const app = {
                 currentIndex: 0,
                 isPlaying: false,
@@ -98,6 +100,7 @@
     
                     })
                 },
+                
                 handleEvent: function () {
                     const cdWidth = cd.offsetWidth
                     const _this = this
@@ -107,7 +110,7 @@
                         { transform: 'rotate(360deg)' }
                     ], {
                         duration: 10000, // 10 seconds
-                        interation: 10000000
+                        iterations: Infinity, //
                     })
                     cdThumbAnimate.pause();
     
@@ -233,6 +236,7 @@
                             }
                         }
                     }
+                    
     
                     function volumeDisplay() {
                         volumeSet.value = _this.songVolume;
@@ -291,7 +295,7 @@
     
                 },
                 loadCurrentSong: function () {
-                    heading.textContent = this.currentSong.name
+                    heading.textContent = this.currentSong.name + ' - ' + this.currentSong.singer
                     cdThumb.style.backgroundImage = `url('${this.currentSong.image}')`
                     audio.src = this.currentSong.path
                 },
