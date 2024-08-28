@@ -1,9 +1,6 @@
 :root {
-    --primary-color:#ec1f55;
+    --primary-color: #ec1f55;
     --text-color: #333;
-    --cd-dim: 150px;
-    --thumb-dim: 140px;
-    --c-width: 5px;
 }
 
 * {
@@ -134,7 +131,7 @@ header h2 {
 
 /* PLAYLIST */
 .playlist {
-    margin-top: 408px;
+    margin-top: 450px;
     padding: 12px;
 }
 
@@ -155,6 +152,7 @@ header h2 {
 .song:active {
     opacity: 0.8;
 }
+
 
 .song.active .option,
 .song.active .author,
@@ -189,9 +187,80 @@ header h2 {
     font-size: 12px;
     color: #999;
 }
+
 .song .option {
     padding: 16px 8px;
     color: #999;
     font-size: 18px;
+}
+
+.btn {
+    color: #666;
+    padding: 18px;
+    font-size: 18px;
+}
+
+.btn-volume {
+    margin-left: 18px;
+}
+
+/* Volume adjustment */
+.volume {
+    display: flex;
+}
+
+.volumeAdjust {
+    width: 90%;
+    margin-top: 30px;
+    -webkit-appearance: none;
+    height: 4px;
+    background: linear-gradient(90deg, rgb(75, 36, 173) 0%, rgb(214, 214, 214) 0%);
+    border-radius: 1px;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    /* box-shadow: 0px 1px 1px 1px rgb(182, 172, 172); */
+
+}
+
+.volumeAdjust::-webkit-slider-thumb {
+    display: var(--c1);
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.volumeAdjust::-moz-range-thumb {
+    display: var(--c1);
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.volumeAdjust:hover {
+    opacity: 1;
+    padding: 2px 0;
+    cursor: pointer;
+
+}
+
+.volumeRange {
+    --c1: none
+}
+
+.volumeRange:hover {
+    --c1: block;
+
 }
 
