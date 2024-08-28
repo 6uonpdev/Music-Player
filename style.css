@@ -54,7 +54,7 @@ header {
 
 header h4 {
     color: var(--primary-color);
-    font-size: 12px;
+    font-size: 16px;
 }
 
 header marquee {
@@ -133,7 +133,7 @@ header marquee {
 
 /* PLAYLIST */
 .playlist {
-    margin-top: 450px;
+    margin-top: 470px;
     padding: 12px;
 }
 

@@ -43,7 +43,7 @@ const app = {
             name: 'Hoang Mang remix',
             singer: 'Hồ Quỳnh Hương, Bùi Anh Tuấn',
             path: './assets/Song1.mp3',
-            image: './assets/Image1.jpg',
+            image: './assets/Logo.png',
         },
         {
             name: 'Ngày đẹp trời để nói chia tay',
