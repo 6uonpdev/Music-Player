@@ -131,6 +131,7 @@ const app = {
                 audio.play()
             }
 
+            
             // Khi song được play
             audio.onplay = function () {
                 cdThumbAnimate.play();
