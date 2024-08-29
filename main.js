@@ -76,7 +76,7 @@ const app = {
         localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config))
     },
     render: function () {
-        this.setConfig('currentIndex', this.currentIndex);
+        //this.setConfig('currentIndex', this.currentIndex);
         const htmls = this.songs.map((song, index) => {
             return `
                                 <div class="song ${index === this.currentIndex ? 'active' : ''}" data-index="${index}">
@@ -301,6 +301,7 @@ const app = {
 
     },
     loadCurrentSong: function () {
+        this.setConfig('currentIndex', this.currentIndex);
         heading.textContent = this.currentSong.name + ' - ' + this.currentSong.singer
         cdThumb.style.backgroundImage = `url('${this.currentSong.image}')`
         audio.src = this.currentSong.path
@@ -308,9 +309,9 @@ const app = {
     loadConfig: function () {
         this.isRandom = this.config.isRandom
         this.isRepeat = this.config.isRepeat
-        //this.currentIndex = this.config.currentIndex
+        this.currentIndex = this.config.currentIndex
         // Cách 2:
-        Object.assign(this, this.config)
+        //Object.assign(this, this.config)
     },
     nextSong: function () {
         this.currentIndex++
