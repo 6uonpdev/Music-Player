@@ -38,7 +38,7 @@ html {
 
 .dashboard {
     padding: 16px 16px 14px;
-    background-color: #fff;
+    background-color: #ebebeb;
     position: fixed;
     top: 0;
     width: 100%;
@@ -134,7 +134,7 @@ header marquee {
 /* PLAYLIST */
 .playlist {
     margin-top: 470px;
-    padding: 12px;
+    padding: 12px 0px;
 }
 
 .song {
