@@ -37,6 +37,7 @@ const app = {
     isRandom: false,
     isRepeat: false,
     isMute: false,
+    songVolume: 100,
     config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
     songs: [
         {
@@ -251,13 +252,11 @@ const app = {
             _this.songVolume = e.target.value;
             audio.volume = _this.songVolume / 100;
             volumeDisplay();
-            _this.setConfig("volume", _this.songVolume);
             _this.volumeIconHandle();
         };
         
         volumeIcon.onclick = function () {
             _this.isMute = !_this.isMute;
-            _this.setConfig('isMute', _this.isMute);
             if (_this.isMute) {
                 audio.muted = true;
                 volumeIcon.innerHTML = '<i class="fas fa-volume-mute"></i>'
@@ -309,8 +308,6 @@ const app = {
     loadConfig: function () {
         this.isRandom = this.config.isRandom
         this.isRepeat = this.config.isRepeat
-        this.isMute = this.config.isMute
-        this.songVolume = this.config.songVolume
         this.currentIndex = this.config.currentIndex
         // Cách 2:
         // Object.assign(this, this.config)
@@ -345,7 +342,7 @@ const app = {
 
         // Định nghĩa các thuộc tính cho object
         this.defineProperties()
-        console.log(this.currentIndex);
+        
         // Lắng nghe / xử lý các xự kiện (DOM events)
         this.handleEvent()
 
