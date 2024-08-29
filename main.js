@@ -37,14 +37,13 @@ const app = {
     isRandom: false,
     isRepeat: false,
     isMute: false,
-    songVolume: 100,
     config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
     songs: [
         {
             name: 'Hoang Mang remix',
-            singer: 'Hồ Quỳnh Hương',
+            singer: 'Hồ Quỳnh Hương, Bùi Anh Tuấn',
             path: './assets/Song1.mp3',
-            image: './assets/Logo.png',
+            image: './assets/Logo.png', 
         },
         {
             name: 'Ngày đẹp trời để nói chia tay',
@@ -54,7 +53,7 @@ const app = {
         },
         {
             name: 'Lặng yên',
-            singer: 'Bùi Anh Tuấn, Ái Phương',
+            singer: 'Bùi Anh Tuấn',
             path: './assets/Song3.mp3',
             image: './assets/Image3.jpg',
         },
@@ -76,7 +75,6 @@ const app = {
         localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config))
     },
     render: function () {
-        //this.setConfig('currentIndex', this.currentIndex);
         const htmls = this.songs.map((song, index) => {
             return `
                                 <div class="song ${index === this.currentIndex ? 'active' : ''}" data-index="${index}">
@@ -95,7 +93,6 @@ const app = {
         playlist.innerHTML = htmls.join('')
     },
     defineProperties: function () {
-        //this.setConfig('currentIndex', this.currentIndex);
         Object.defineProperty(this, 'currentSong', {
             get: function () {
                 return this.songs[this.currentIndex]
@@ -252,9 +249,9 @@ const app = {
             _this.songVolume = e.target.value;
             audio.volume = _this.songVolume / 100;
             volumeDisplay();
+            _this.setConfig("volume", _this.songVolume);
             _this.volumeIconHandle();
         };
-        
         volumeIcon.onclick = function () {
             _this.isMute = !_this.isMute;
             if (_this.isMute) {
@@ -281,12 +278,10 @@ const app = {
     },
     volumeIconHandle: function () {
         const volume = this.songVolume;
-        if(!this.isMute) {
-            if (volume > 50) volumeIcon.innerHTML = '<i class="fas fa-volume-up"></i>'
-            else {
-                if (volume >= 5 && volume <= 50) volumeIcon.innerHTML = '<i class="fas fa-volume-down"></i>'
-                else volumeIcon.innerHTML = '<i class="fas fa-volume-mute"></i>'
-            }
+        if (volume > 50) volumeIcon.innerHTML = '<i class="fas fa-volume-up"></i>'
+        else {
+            if (volume >= 5 && volume <= 50) volumeIcon.innerHTML = '<i class="fas fa-volume-down"></i>'
+            else volumeIcon.innerHTML = '<i class="fas fa-volume-mute"></i>'
         }
 
     },
@@ -301,7 +296,6 @@ const app = {
 
     },
     loadCurrentSong: function () {
-        this.setConfig('currentIndex', this.currentIndex);
         heading.textContent = this.currentSong.name + ' - ' + this.currentSong.singer
         cdThumb.style.backgroundImage = `url('${this.currentSong.image}')`
         audio.src = this.currentSong.path
@@ -309,9 +303,8 @@ const app = {
     loadConfig: function () {
         this.isRandom = this.config.isRandom
         this.isRepeat = this.config.isRepeat
-        this.currentIndex = this.config.currentIndex
         // Cách 2:
-        //Object.assign(this, this.config)
+        // Object.assign(this, this.config)
     },
     nextSong: function () {
         this.currentIndex++
@@ -343,7 +336,7 @@ const app = {
 
         // Định nghĩa các thuộc tính cho object
         this.defineProperties()
-        
+
         // Lắng nghe / xử lý các xự kiện (DOM events)
         this.handleEvent()
 
