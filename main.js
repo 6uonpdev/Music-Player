@@ -78,9 +78,10 @@ const app = {
         {
             name: 'Vì người không xứng đáng',
             singer: 'Tuấn Hưng',
-            path: './assets/Song8.mp3',
+            path: './assets/Song7.mp3',
             image: './assets/Logo.png',
         },
+
         {
             name: 'Khuê mộc lang',
             singer: 'Hương Ly & Jombie',
@@ -93,8 +94,6 @@ const app = {
             path: './assets/Song9.mp3',
             image: './assets/Image9.jpg',
         },
-
-
     ],
     setConfig: function (key, value) {
         this.config[key] = value
