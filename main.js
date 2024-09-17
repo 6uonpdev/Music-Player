@@ -46,10 +46,10 @@ const app = {
             image: './assets/Logo.png',
         },
         {
-            name: 'Ngày đẹp trời để nói chia tay',
-            singer: 'Lou Hoàng',
+            name: 'Hứa đợi nhưng chẳng tới',
+            singer: 'Lâm Tuấn, Vương Thiên Tuấn',
             path: './assets/Song2.mp3',
-            image: './assets/Image2.jpg',
+            image: './assets/Logo.png',
         },
         {
             name: 'Lặng yên',
@@ -58,10 +58,10 @@ const app = {
             image: './assets/Image3.jpg',
         },
         {
-            name: 'Tránh duyên remix',
-            singer: 'Đình Dũng',
+            name: 'Tìm lại bầu trời remix',
+            singer: 'Tuấn Hứng',
             path: './assets/Song4.mp3',
-            image: './assets/Image4.jpg',
+            image: './assets/Logo.png',
         },
         {
             name: 'Thần thoại',
@@ -69,6 +69,19 @@ const app = {
             path: './assets/Song5.mp3',
             image: './assets/Image5.jpg',
         },
+        {
+            name: 'Cầu vồng khuyết',
+            singer: 'Đạt Long Vinh',
+            path: './assets/Song6.mp3',
+            image: './assets/Logo.png',
+        },
+        {
+            name: 'Vì người không xứng đáng',
+            singer: 'Tuấn Hưng',
+            path: './assets/Song8.mp3',
+            image: './assets/Logo.png',
+        },
+
     ],
     setConfig: function (key, value) {
         this.config[key] = value
