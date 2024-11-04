@@ -81,6 +81,13 @@ const app = {
             path: './assets/Song8.mp3',
             image: './assets/Logo.png',
         },
+        {
+            name: 'Khuê mộc lang',
+            singer: 'Hương Ly & Jombie',
+            path: './assets/Song7.mp3',
+            image: './assets/Images7.jpg',
+        },
+
 
     ],
     setConfig: function (key, value) {
