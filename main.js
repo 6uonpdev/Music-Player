@@ -87,6 +87,12 @@ const app = {
             path: './assets/Song7.mp3',
             image: './assets/Image7.jpg',
         },
+        {
+            name: 'Vì điều gì',
+            singer: 'buitruonglinh ft DRT',
+            path: './assets/Song9.mp3',
+            image: './assets/Image9.jpg',
+        },
 
 
     ],
