@@ -46,14 +46,14 @@ const app = {
             image: './assets/Logo.png',
         },
         {
-            name: 'Hứa đợi nhưng chẳng tới',
-            singer: 'Lâm Tuấn, Vương Thiên Tuấn',
+            name: 'Kho Báu',
+            singer: '(S)trong, Rhymastic',
             path: './assets/Song2.mp3',
-            image: './assets/Logo.png',
+            image: './assets/Image2.png',
         },
         {
-            name: 'Lặng yên',
-            singer: 'Bùi Anh Tuấn, Ái Phương',
+            name: 'Phép Màu',
+            singer: 'Mounter x MAYDAYs, Minh Tốc',
             path: './assets/Song3.mp3',
             image: './assets/Image3.jpg',
         },
@@ -64,10 +64,10 @@ const app = {
             image: './assets/Logo.png',
         },
         {
-            name: 'Thần thoại',
-            singer: 'Jackie Chan',
+            name: '有點甜',
+            singer: 'Uông Tô Lang',
             path: './assets/Song5.mp3',
-            image: './assets/Image5.jpg',
+            image: './assets/Logo.jpg',
         },
         {
             name: 'Cầu vồng khuyết',
