@@ -59,7 +59,7 @@ const app = {
         },
         {
             name: 'Tìm lại bầu trời remix',
-            singer: 'Tuấn Hứng',
+            singer: 'Tuấn Hưng',
             path: './assets/Song4.mp3',
             image: './assets/Logo.png',
         },
