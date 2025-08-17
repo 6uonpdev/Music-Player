@@ -49,7 +49,7 @@ const app = {
             name: 'Kho Báu',
             singer: '(S)trong, Rhymastic',
             path: './assets/Song2.mp3',
-            image: './assets/Image2.png',
+            image: './assets/Image2.jpg',
         },
         {
             name: 'Phép Màu',
@@ -67,7 +67,7 @@ const app = {
             name: '有點甜',
             singer: 'Uông Tô Lang',
             path: './assets/Song5.mp3',
-            image: './assets/Logo.jpg',
+            image: './assets/Logo.png',
         },
         {
             name: 'Cầu vồng khuyết',
